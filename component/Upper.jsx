@@ -2,7 +2,6 @@ import React,{useContext, useEffect, useState} from 'react'
 import { ImageBackground, View,Text,Image } from 'react-native'
 import useMyImage from '../customHooks/useMyImage';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { Fontisto } from "@expo/vector-icons";
 import { Context } from '../App';
 import axios from 'axios';
 
@@ -19,12 +18,10 @@ const Upper = () => {
 
     useEffect(()=>{
      if(data){
-      
       axios.get(data.currentweatherApi)
       .then(data=>{
         setRes(data.data)
       })
-
      }
     },[data])
     
